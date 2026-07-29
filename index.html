@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSDB | The Great StarShip Database</title>
+    <title>SDB | The Great Starship Database</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/logo.png" type="image/png">
 </head>
 <body>
 
     <!-- Navigation Header -->
     <header class="navbar">
-        <div class="logo">
-            <span class="logo-icon">🪐</span>
-            <span class="logo-text">StarShipDataBase</span>
-        </div>
+        <a href="/" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="Images/logo.png" alt="Starship Database Logo" class="logo-icon">
+            <span class="logo-text">StarshipDataBase</span>
+        </a>
         <nav class="nav-links">
-            <a href="#vehicles">Vehicles</a>
-            <a href="#sites">Sites</a>
-            <a href="#flights">Flights</a>
-            <a href="#infopedia">Infopedia</a>
+            <a href="vehicles/">Vehicles</a>
+            <a href="sites/">Sites</a>
+            <a href="flights/">Flights</a>
+            <a href="infopedia/">Infopedia</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="badge">📡 Excitement Guaranteed</div>
-            <h1>The Home of Everything StarShip!</h1>
-            <p>An open-access database indexing launch vehicles, orbital trajectories, astronomical bodies, and deep-space missions.</p>
+            <div class="badge">🔥 Excitement Guaranteed</div>
+            <h1>The Home of Everything Starship!</h1>
+            <p>An open database of everything related to SpaceXs Starship Rocket. From test articles to integrated flights, all of it can be found here.</p>
             
             <div class="search-box">
-                <input type="text" placeholder="Search by vehicle (e.g., Falcon 9), exoplanet, COSPAR ID, or launch pad...">
-                <button class="btn btn-primary">Search DB</button>
+                <input type="text" placeholder="Search the Database...">
+                <button class="btn btn-primary">Search SDB</button>
             </div>
         </div>
     </section>
@@ -42,59 +43,91 @@
     <!-- Metrics / Quick Telemetry Section -->
     <section class="metrics">
         <div class="metric-card">
-            <span class="metric-value">14,280+</span>
-            <span class="metric-label">Tracked Satellites</span>
+            <span class="metric-value">13</span>
+            <span class="metric-label">Full Stack Flights</span>
         </div>
         <div class="metric-card">
-            <span class="metric-value">5,600+</span>
-            <span class="metric-label">Confirmed Exoplanets</span>
+            <span class="metric-value">4</span>
+            <span class="metric-label">Confirmed Launchpads</span>
         </div>
         <div class="metric-card">
-            <span class="metric-value">8,910</span>
-            <span class="metric-label">Orbital Launches</span>
+            <span class="metric-value">2</span>
+            <span class="metric-label">Reflights</span>
         </div>
         <div class="metric-card">
-            <span class="metric-value">99.98%</span>
-            <span class="metric-label">API Uptime</span>
+            <span class="metric-value">3</span>
+            <span class="metric-label">Catches</span>
         </div>
     </section>
 
     <!-- Main Categories Grid -->
     <section class="categories">
-        <h2>Database Categories</h2>
-        <div class="card-grid">
-            
-            <div class="card">
-                <div class="card-tag">Orbital Operations</div>
-                <h3>Missions & Launches</h3>
-                <p>Complete historical logs of orbital attempts, payload manifests, launch pad coordinates, and static fire records.</p>
-                <a href="#" class="card-link">Browse Launches &rarr;</a>
+        <h2>Current Vehicles</h2>
+        <div class="card-grid" id="current_vehicles">
+            <!-- Temporary loading state while PapaParse runs -->
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Connecting to Telemetry Feed...</p>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <div class="card-tag">Engineering</div>
-                <h3>Propulsion & Rockets</h3>
-                <p>Technical schematics, engine thrust metrics, propellant mixtures (LOX/RP-1, LOX/CH4), and staging specifications.</p>
-                <a href="#" class="card-link">Explore Hardware &rarr;</a>
+    <!-- Test Articles Grid -->
+     <section class="categories">
+        <h2>Current Test Articles</h2>
+        <div class="card-grid" id="current_test_articles">
+            <!-- Temporary loading state while PapaParse runs -->
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Connecting to Telemetry Feed...</p>
             </div>
-
-            <div class="card">
-                <div class="card-tag">Deep Space</div>
-                <h3>Exoplanets & Stars</h3>
-                <p>Physical characteristics, orbital eccentricities, spectra data, and habitable zone ratings curated from catalog surveys.</p>
-                <a href="#" class="card-link">View Celestial Data &rarr;</a>
-            </div>
-
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 AstroDB. Open Space Data Platform.</p>
-            <p class="license-note">Database contents licensed under <a href="#">ODbL</a> • Source code licensed under <a href="#">MIT</a></p>
+            <p>StarshipDataBase by HamsterSpaceNerd3000</p>
+            <p class="license-note">Data is from HSN3K internal spreadsheets •  Data is aquired from sources like <a href="#">SST</a> and <a href="#">NSF</a>.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <!-- Custom Logic -->
+    <script src="/scripts/Vehicles.js"></script>
+    <script>
+        (function checkRoute() {
+            const currentPath = window.location.pathname;
+
+            // Skip check if already on the 404 page
+            if (currentPath.includes('/404')) return;
+
+            // 1. If path ends with a specific file extension (e.g., .html, .png, .js)
+            const isFile = /\.[a-zA-Z0-9]+$/.test(currentPath);
+
+            // 2. Build target URL to check for existence
+            let targetUrl = currentPath;
+            if (!isFile) {
+                // Ensure path ends with slash, e.g. /vehicles/ -> /vehicles/index.html
+                const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+                targetUrl = `${normalizedPath}index.html`;
+            }
+
+            // If at the root domain, skip check
+            if (targetUrl === '/index.html' || targetUrl === '/') return;
+
+            // 3. Perform a HEAD request to check if the route or asset exists
+            fetch(targetUrl, { method: 'HEAD' })
+                .then(response => {
+                    if (!response.ok && response.status !== 304) {
+                        window.location.replace('/404.html');
+                    }
+                })
+                .catch(() => {
+                    window.location.replace('/404.html');
+                });
+                
+        })();
+    </script>
 </body>
 </html>

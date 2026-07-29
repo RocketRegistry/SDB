@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDB | Vehicles</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <a href="../" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="../Images/logo.png" alt="Starship Database Logo" class="logo-icon">
+            <span class="logo-text">StarshipDataBase</span>
+        </a>
+        <nav class="nav-links">
+            <a href="../vehicles/">Vehicles</a>
+            <a href="../sites/">Sites</a>
+            <a href="../flights/">Flights</a>
+            <a href="../infopedia/">Infopedia</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Starship Vehicles</h1>
+            <p>A list of every vehicle in the Starship database.</p>
+        </div>
+    </section>
+
+    <!-- Main Categories Grid -->
+    <div class="vehicle-columns">
+        <section class="categories">
+            <h2>Ships</h2>
+            <div class="card-grid" id="ship_cards">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Loading ship telemetry...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Boosters</h2>
+            <div class="card-grid" id="booster_cards">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Loading booster telemetry...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>StarshipDataBase by HamsterSpaceNerd3000</p>
+            <p class="license-note">Data is from HSN3K internal spreadsheets •  Data is aquired from sources like <a href="#">SST</a> and <a href="#">NSF</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <!-- Custom Logic -->
+    <script src="../scripts/Vehicles.js"></script>
+</body>
+</html>
