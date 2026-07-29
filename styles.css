@@ -297,6 +297,134 @@ body {
     font-family: var(--font-mono);
 }
 
+/* --- Article / Detail Page Styles --- */
+.page-shell {
+    max-width: 980px;
+    margin: 3.5rem auto 5rem;
+    padding: 0 1.5rem;
+}
+
+.article-card {
+    padding: 2.2rem 2.2rem 2.5rem;
+}
+
+.article-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-copy {
+    flex: 1 1 0;
+    min-width: 240px;
+}
+
+.article-title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.article-text {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.article-media {
+    flex: 0 0 260px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.03);
+    padding: 0.75rem;
+    overflow: hidden;
+}
+
+.article-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.article-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.fact-card {
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+}
+
+.fact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.fact-value {
+    margin-top: 0.35rem;
+    font-weight: 600;
+}
+
+.article-section-list {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.article-section-card {
+    padding: 1.7rem 2rem;
+}
+
+.article-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+}
+
+.article-section-text {
+    color: var(--text-muted);
+}
+
+.article-inline-media {
+    margin: 0.75rem 0 1rem 1.25rem;
+    width: min(42%, 420px);
+    float: right;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 0.6rem;
+    background: rgba(255,255,255,0.03);
+    overflow: hidden;
+}
+
+.article-inline-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.article-section-card {
+    overflow: hidden;
+}
+
+.article-section-card p {
+    overflow: hidden;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .nav-links {
