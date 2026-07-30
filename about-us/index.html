@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDB | The Great Starship Database</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
+</head>
+<body>
+
+    <div class="dev-notice-overlay" id="devNoticeModal" role="dialog" aria-modal="true" aria-labelledby="dev-notice-title">
+        <div class="dev-notice-modal">
+            <button class="dev-notice-close" id="devNoticeClose" aria-label="Close notice">×</button>
+            <p class="dev-notice-eyebrow">Early Development</p>
+            <h2 id="dev-notice-title">This site is still being built</h2>
+            <p>The Starship Database is currently in development. Some features and data are not yet available.</p>
+            <button class="btn btn-primary" id="devNoticeContinue">Continue</button>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <a href="/" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="../Images/logo.png" alt="Starship Database Logo" class="logo-icon">
+            <span class="logo-text">StarshipDataBase</span>
+        </a>
+        <nav class="nav-links">
+            <a href="vehicles/">Vehicles</a>
+            <a href="sites/">Sites</a>
+            <a href="flights/">Flights</a>
+            <a href="about-us/">About Us</a>
+            <a href="infopedia/">Infopedia</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meet The Team!</h1>
+                <p>Meet the team of {insert name here}. We're just some nerds with some spreadsheets we want to show off! Below you'll find information about each team member as well as the history of the database!<p>
+            </div>
+        </section>
+
+        <section class="article-section-list">
+            <article class="card article-section-card">
+                <h2 class="article-section-title">ARTICLE SECTION TITLE HERE</h2>
+                <p class="article-section-text">
+                    ARTICLE SECTION TEXT HERE
+                </p>
+                <div class="article-inline-media">
+                        <img src="IMG PATH" alt="DESCRIPTION" title="DESCRIPTION">
+                    </div>
+            </article>
+
+            <article class="card article-section-card">
+                <h2 class="article-section-title">Sources</h2>
+                <ul class="article-section-text" style="margin-left: 1.1rem; padding-left: 0.5rem; display: grid; gap: 0.6rem;">
+                    <li> <p>SOURCE NAME</p> <a href="SOURCE URL" target="_blank" rel="noopener noreferrer">SOURCE TEXT</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>StarshipDataBase by HamsterSpaceNerd3000</p>
+            <p class="license-note">Data is from HSN3K internal spreadsheets •  Data is aquired from sources like <a href="#">SST</a> and <a href="#">NSF</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

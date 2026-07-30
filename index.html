@@ -12,6 +12,16 @@
 </head>
 <body>
 
+    <div class="dev-notice-overlay" id="devNoticeModal" role="dialog" aria-modal="true" aria-labelledby="dev-notice-title">
+        <div class="dev-notice-modal">
+            <button class="dev-notice-close" id="devNoticeClose" aria-label="Close notice">×</button>
+            <p class="dev-notice-eyebrow">Early Development</p>
+            <h2 id="dev-notice-title">This site is still being built</h2>
+            <p>The Starship Database is currently in development. Some features and data are not yet available.</p>
+            <button class="btn btn-primary" id="devNoticeContinue">Continue</button>
+        </div>
+    </div>
+
     <!-- Navigation Header -->
     <header class="navbar">
         <a href="/" class="logo" style="text-decoration: none; color: inherit;">
@@ -22,6 +32,7 @@
             <a href="vehicles/">Vehicles</a>
             <a href="sites/">Sites</a>
             <a href="flights/">Flights</a>
+            <a href="about-us/">About Us</a>
             <a href="infopedia/">Infopedia</a>
         </nav>
     </header>
@@ -95,6 +106,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <!-- Custom Logic -->
     <script src="/scripts/Vehicles.js"></script>
+    // Popup Script
+    <script>
+        (function() {
+            const modal = document.getElementById('devNoticeModal');
+            const closeButtons = [
+                document.getElementById('devNoticeClose'),
+                document.getElementById('devNoticeContinue')
+            ];
+
+            if (!modal) return;
+
+            const hideModal = () => {
+                modal.classList.remove('is-visible');
+                document.body.classList.remove('modal-open');
+            };
+
+            document.body.classList.add('modal-open');
+            modal.classList.add('is-visible');
+
+            closeButtons.forEach(button => {
+                if (button) button.addEventListener('click', hideModal);
+            });
+
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) hideModal();
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') hideModal();
+            });
+        })();
+    </script>
     <script>
         (function checkRoute() {
             const currentPath = window.location.pathname;

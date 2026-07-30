@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masseys | SDB</title>
     <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../Images/logo.png" type="image/png">
 </head>
 <body>
     <header class="navbar">
@@ -16,13 +20,119 @@
             <a href="../../vehicles/">Vehicles</a>
             <a href="../../sites/">Sites</a>
             <a href="../../flights/">Flights</a>
+            <a href="../../about-us/">About Us</a>
             <a href="../../infopedia/">Infopedia</a>
         </nav>
     </header>
 
-    <main style="max-width: 900px; margin: 4rem auto; padding: 0 1.5rem;">
-        <h1>Masseys</h1>
-        <p style="color: var(--text-muted); margin-top: 1rem;">Detail page for Masseys.</p>
+    <main class="page-shell">
+        <section class="card article-card">
+            <div class="badge">Testing Site • Starbase Tx</div>
+
+            <div class="article-hero">
+                <div class="article-copy">
+                    <h1 class="article-title">Masseys Outpost</h1>
+                    <p class="article-text">
+                        Masseys is SpaceX's primary testing site for Cryo tests, as well as Ship Static Fires. As the only vehicle testing not done at Masseys is Booster Engine Testing, which is done on the pad. The site used to be a gun range, which is where its name comes from. Masseys Gun Range still exists, it simply relocated.
+                    </p>
+                </div>
+
+                <div class="article-media">
+                    <img src="../../Images/sites/Masseys/Masseys1.jpg" alt="Masseys circa August 2025 by WAI" title="Masseys circa August 2025 by WAI">
+                </div>
+            </div>
+
+            <div class="article-facts">
+                <div class="fact-card">
+                    <div class="fact-label">Location</div>
+                    <div class="fact-value">Starbase, Texas</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Role</div>
+                    <div class="fact-value">Vehicle and Test Article Testing</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Status</div>
+                    <div class="fact-value">Active</div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-label">Tests To Date</div>
+                    <div class="fact-value" id="masseys_total_tests">Loading...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-section-list">
+            <article class="card article-section-card">
+                <h2 class="article-section-title">Overview</h2>
+                <p class="article-section-text">
+                    Masseys was originally a gun range, before being purchased by SpaceX in 2022 to test vehicles a safe distance from the launch site. The idea being to test vehicle with interupting operations and the Launch Site. The sites first test was of B7.1, a Booster test tank.
+                </p>
+            </article>
+
+            <article class="card article-section-card">
+                <h2 class="article-section-title">Masseys Testing Data</h2>
+                <div class="article-hero" style="margin-bottom: 0;">
+                    <div class="article-copy">
+                        <p class="article-section-text">
+                            Click the button below to go to the page containing all our Masseys testing data.
+                        </p>
+                        <a href="../../masseystest/" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Masseys Testing History</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card article-section-card">
+                <h2 class="article-section-title">History</h2>
+                <p class="article-section-text">
+                    After being purchased by SpaceX in 2022, the site was converted into a test site fairly quickly, with first tests later that year in June. The first flight vehicles tested at the site were S25 and B10, both undergoing cryo tests in mid-2023. 
+                </p>
+                <p class="article-section-text">
+                    The static fire stand was completed in 2024, having the first flame trench in Starbase. The first static fire at the site was of S26 taking place in 06/2024.
+                </p>
+                <p class="article-section-text">
+                    At 11:01pm CDT on June 18th 2025, just over 1 year since the first static fire, S36 would experience an anomaly after a COPV failed below expected pressure. The explosion took out the Static Fire area, CH4 tank farm, and much more infrastructure nearby. Cleanup efforts would take many weeks, and the next cryo test was in late July 2025.
+                </p>
+                <p class="article-section-text">
+                    SpaceX would use this time to upgrade the static fire stand, both to V3 Ship, and to add protections in case of a similiar failure. The next static fire would be of S39 on 04/14/2026.
+                </p>
+                <div class="article-image-grid">
+                    <div class="article-inline-media">
+                        <img src="../../Images/sites/Masseys/Masseys2.webp" alt="Masseys in 2024 with S26 on Static Fire Stand. Taken by RGV." title="Masseys in 2024 with S26 on Static Fire Stand. Taken by RGV.">
+                    </div>
+                    <div class="article-inline-media">
+                        <img src="../../Images/sites/Masseys/Masseys3.jpg" alt="S36 explosion taken by WAI" title="S36 explosion taken by WAI">
+                    </div>
+                    <div class="article-inline-media">
+                        <img src="../../Images/sites/Masseys/Masseys4.webp" alt="Masseys SFS post S36 explosion, taken by WAI." title="Masseys SFS post S36 explosion, taken by WAI.">
+                    </div>
+                </div>
+            </article>
+
+            <article class="card article-section-card">
+                <h2 class="article-section-title">Sources</h2>
+                <ul class="article-section-text" style="margin-left: 1.1rem; padding-left: 0.5rem; display: grid; gap: 0.6rem;">
+                    <li> <p>RGV S26 Image</p> <a href="https://www.youtube.com/watch?v=sZZbtLRoZog" target="_blank" rel="noopener noreferrer">RGV Live Stream</a></li>
+                    <li> <p>WAI 2025 Image</p> <a href="https://x.com/FelixSchlang/status/1955281482693390552/photo/1" target="_blank" rel="noopener noreferrer">WAI Twitter</a></li>
+
+                </ul>
+                
+            </article>
+        </section>
     </main>
+    <script src="../../scripts/article-image-lightbox.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>StarshipDataBase by HamsterSpaceNerd3000</p>
+            <p class="license-note">Data is from HSN3K internal spreadsheets •  Data is aquired from sources like <a href="#">SST</a> and <a href="#">NSF</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="/scripts/Masseys.js"></script>
+    <script src="/scripts/article-image-lightbox.js"></script>
+
 </body>
 </html>

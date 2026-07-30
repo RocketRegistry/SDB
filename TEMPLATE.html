@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTICLE | SDB</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../Images/logo.png" type="image/png">
+</head>
+<body>
+    <script>
+        window.location.replace('/404.html');
+    </script>
+    <header class="navbar">
+        <a href="../../" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="../../Images/logo.png" alt="Starship Database Logo" class="logo-icon">
+            <span class="logo-text">StarshipDataBase</span>
+        </a>
+        <nav class="nav-links">
+            <a href="../../vehicles/">Vehicles</a>
+            <a href="../../sites/">Sites</a>
+            <a href="../../flights/">Flights</a>
++            <a href="../../about-us/">About Us</a>
+            <a href="../../infopedia/">Infopedia</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="card article-card">
+            <div class="badge">TYPE • STATUS / LOCATION</div>
+
+            <div class="article-hero">
+                <div class="article-copy">
+                    <h1 class="article-title">ARTICLE TITLE HERE</h1>
+                    <p class="article-text">
+                        ARTICLE INFO HERE
+                    </p>
+                </div>
+
+                <div class="article-media">
+                    <img src="IMG PATH" alt="DESCRIPTION" title="DESCRIPTION">
+                </div>
+            </div>
+
+            <div class="article-facts">
+                <div class="fact-card">
+                    <div class="fact-label">FACT LABEL HERE</div>
+                    <div class="fact-value">FACT VALUE HERE</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-section-list">
+            <article class="card article-section-card">
+                <h2 class="article-section-title">ARTICLE SECTION TITLE HERE</h2>
+                <p class="article-section-text">
+                    ARTICLE SECTION TEXT HERE
+                </p>
+                <div class="article-inline-media">
+                        <img src="IMG PATH" alt="DESCRIPTION" title="DESCRIPTION">
+                    </div>
+            </article>
+
+            <article class="card article-section-card">
+                <h2 class="article-section-title">Sources</h2>
+                <ul class="article-section-text" style="margin-left: 1.1rem; padding-left: 0.5rem; display: grid; gap: 0.6rem;">
+                    <li> <p>SOURCE NAME</p> <a href="SOURCE URL" target="_blank" rel="noopener noreferrer">SOURCE TEXT</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="../../scripts/article-image-lightbox.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>StarshipDataBase by HamsterSpaceNerd3000</p>
+            <p class="license-note">Data is from HSN3K internal spreadsheets •  Data is aquired from sources like <a href="#">SST</a> and <a href="#">NSF</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
