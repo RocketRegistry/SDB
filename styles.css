@@ -295,6 +295,25 @@ body.lightbox-open {
     padding: 0;
 }
 
+.categories .card {
+    text-align: center;
+    align-items: center;
+}
+
+.categories .card .card-tag,
+.categories .card h3,
+.categories .card p {
+    width: 100%;
+    text-align: center;
+}
+
+.categories .card h3 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .categories h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
@@ -493,6 +512,25 @@ body.lightbox-open {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.categories .article-inline-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.75rem 0 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.categories .article-inline-media img {
+    width: min(220px, 100%);
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
 }
 
 .article-image-grid {
